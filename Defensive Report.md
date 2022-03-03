@@ -48,17 +48,19 @@ The following machines were identified on the network:
   - 139/tcp   open   netbios-ssn
   - 445/tcp   open   netbios-ssn
 
-# Description of Targets
+### Description of Targets
 
 The target of this attack was: `192.168.1.110`
 
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
 
-# Monitoring the Targets
+### Monitoring the Targets
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-### Alert 1: Excessive HTTP Errors
+### Alert 1: 
+
+Excessive HTTP Errors
   - Alert 1 is implemented as follows:
   - Metric: Packetbeat
   - Threshold: WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes

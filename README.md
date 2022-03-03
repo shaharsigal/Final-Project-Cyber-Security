@@ -1,5 +1,3 @@
-[Power Point](Offensive%20Final%20Project%20Presentation%20Template%20.pdf)
-
 # Final-Project
 ![](Images/Network%20Toplogy.png)
 

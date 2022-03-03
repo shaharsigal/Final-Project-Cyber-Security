@@ -60,11 +60,10 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 ### Alert 1: 
 
-Excessive HTTP Errors
-  - Alert 1 is implemented as follows:
-  - Metric: Packetbeat
-  - Threshold: WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
-  - Vulnerability Mitigated: It mitigates a brute Force attack.
+Excessive HTTP Errors is implemented as follows:
+  - Metric: WHEN count () grouped over top 5 'http.respone.status_code'
+  - Threshold: IS ABOVE 400 FOR THE LAST 5 minutes
+  - Vulnerability Mitigated: Enumeration/brute Force attack.
   - Reliability: This alert does not generate a lot of false positives, and the rate of reliability is medium or high. 
  
 ![](Images/Alert%201%20Rules.png)
@@ -73,11 +72,12 @@ Excessive HTTP Errors
 
 
 
-### Alert 2: HTTP Request Size Monitor
-  - Alert 2 is implemented as follows:
-  - Metric: Packetbeat
-  - Threshold: WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
-  - Vulnerability Mitigated: Code injection in HTTP,or DDOs attack
+### Alert 2: 
+
+HTTP Request Size Monitor is implemented as follows:
+  - Metric: WHEN sum() of http.request.bytes OVER all documents 
+  - Threshold:  IS ABOVE 3500 FOR THE LAST 1 minute
+  - Vulnerability Mitigated: Code injection in HTTP/DDOs attack
   - Reliability: This alert does not generate lots of false positives/false negatives. The rate of reliability for this alert is high. 
 
 ![](Images/Alert%202%20rules.png)
@@ -86,11 +86,12 @@ Excessive HTTP Errors
 
 
 
-### Alert 3: CPU Usage Monitor
-  - Alert 3 is implemented as follows:
-  - Metric: Metricbeat
-  - Threshold: WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
-  - Vulnerability Mitigated:  DDOs 
+### Alert 3: 
+
+CPU Usage Monitor is implemented as follows:
+  - Metric: WHEN max() OF system.process.cpu.total.pct OVER all documents
+  - Threshold: IS ABOVE 0.5 FOR THE LAST 5 minutes
+  - Vulnerability Mitigated: DDOs 
   - Reliability: This alert does not generate lots of false positives/false negatives. The rate of reliability for this alert is high.
   
 ![](Images/Alert%203%20Rules.png)

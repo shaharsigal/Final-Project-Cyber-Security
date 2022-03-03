@@ -1,19 +1,16 @@
-# Final-Project
-![](Images/Network%20Toplogy.png)
-
 # Red Team: Summary of Operations
-# Table of Contents
+### Table of Contents
  - Exposed Services
  - Critical Vulnerabilities
  - Exploitation
-# Exposed Services
+### Exposed Services
 - Fill out the information below:
   - Nmap scan results for each machine reveal the below services and OS details: nmap -sV 192.168.1.110  command to Scan Target 1
   
  ![](Images/Nmap%20Scan.png)
  
 - This scan identifies the services below as potential points of entry:
-### Target 1:
+ ### Target 1:
   - SSH
   - HTTP
   - rpcbind
@@ -24,7 +21,7 @@
 
 
 - The following vulnerabilities were identified on each target:
-### Target 1:
+ ### Target 1:
 
 
 | Vulnerability        | Description                                                                                                                                                      | Impact                              | CVE or Standard |
@@ -34,10 +31,11 @@
 | Weak Password        | Using easily guess passwords                                                                                                                                     | Gain access to the machine          | Standard        |
 | Privilege Escalation | when running with Python 3.6 or later,  allows remote authenticated users to execute  arbitrary code, leading to privilege escalation.                           | Gain root access to the machine     | CVE-2020-29396  |
 
-![](Images/WPScan.png)
+![](Images/wordpress%201.png)
+![](Images/wordpress%202.png)
 
 
-# Exploitation
+### Exploitation
 
 - Fill out the details below. Include screenshots where possible:
 - The Red Team was able to penetrate Target 1 and retrieve the following confidential data:
@@ -51,7 +49,7 @@
 
 
 
-                                      flag1: {b9bbcb33e11b80be759c4e844862482d}
+                                      flag1.txt: flag1{b9bbcb33e11b80be759c4e844862482d}
  
  
 ![](Images/Flag%201%20%26%202.png) 
@@ -64,7 +62,7 @@
   - R@v3enSecurity
   - SELECT * FROM wp_post
  
-                                      flag2: {fc3fd58dcdad9ab23faca6e9a36e581c}
+                                      flag2.txt: flag2{fc3fd58dcdad9ab23faca6e9a36e581c}
 
 
 ![](Images/Flag%201%20%26%202.png)
@@ -79,7 +77,7 @@
 
                                           
 
-                                      flag3: {afc01ab56b50591e7dccf93122770cd2} 
+                                      flag3.txt: flag3{afc01ab56b50591e7dccf93122770cd2} 
 
 
  ![](Images/Flag%203.png)
@@ -92,9 +90,12 @@
    - cat flag4                  
  
 
-                                       flag4: {715dea6c055b9fe3337544932f2941ce}
+                                      flag4.txt:  flag4{715dea6c055b9fe3337544932f2941ce}
  
  
 ![](Images/Flag%204.png)
                                       
                    
+
+
+

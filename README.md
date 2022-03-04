@@ -1,5 +1,5 @@
 # Final-Project
-![](Images/Network%20Toplogy.png)
+![](Images/Final%20Project%202.0.drawio.png)
 
 # Red Team: Summary of Operations
 # Table of Contents
